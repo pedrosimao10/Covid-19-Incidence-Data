@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/css/style.css">
+
+	</head>
+
+  <body>
+    <div class="topnav">
+      <a class="active" th:href="@{/}">Search Again</a>
+      <a th:href="@{/cache}">Cache Stats</a>
+      <a th:href="@{/news}">Latest News</a>
+    </div>
+    <div class="worldresults">
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section" style="color: white;">World Stats</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-wrap">
+              <table class="table table-responsive-xl">
+                <thead>
+                  <tr>
+                      <th>Country</th>
+                      <th>Active Cases</th>
+                      <th>New Cases</th>
+                      <th>Total Cases</th>
+                      <th>Serious Critical</th>
+                      <th>New Deaths</th>
+                      <th>Total Deaths</th>
+                      <th>New Recovered</th>
+                      <th>Total Recovered</th>
+                      <th>Total Tests</th>
+                      <th>Number of Deaths in 1 Million</th>
+
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td th:text="${resultWorld.get('Country')}">Country</td>
+                      <td th:text="${resultWorld.get('Active Cases')}">Active Cases</td>
+                      <td th:text="${resultWorld.get('New Cases')}">New Cases</td>
+                      <td th:text="${resultWorld.get('Total Cases')}">Total Cases</td>
+                      <td th:text="${resultWorld.get('Serious Critical')}">Serious Critical</td>
+                      <td th:text="${resultWorld.get('New Deaths')}">New Deaths</td>
+                      <td th:text="${resultWorld.get('Total Deaths')}">Total Deaths</td>
+                      <td th:text="${resultWorld.get('New Recovered')}">New Recovered</td>
+                      <td th:text="${resultWorld.get('Total Recovered')}">Total Recovered</td>
+                      <td th:text="${resultWorld.get('Total Tests')}">Total Tests</td>
+                      <td th:text="${resultWorld.get('Number of Deaths in 1 Million')}">Number of Deaths in 1 Million</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  
+    </body>
+</html>

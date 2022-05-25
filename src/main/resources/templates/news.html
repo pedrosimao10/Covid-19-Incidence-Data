@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+  <body>
+    <div class="topnav">
+      <a th:href="@{/}">Search Again</a>
+      <a th:href="@{/cache}">Cache Stats</a>
+      <a class="active" th:href="@{/news}">Latest News</a>
+    </div>
+    <div class="divresults">
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+              <h2 class="heading-section" style="color: white;" >News</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-wrap">
+                <table class="table table-responsive-xl">
+                  <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Url</th>
+                        <th>Source</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td class="Requests" th:text="${news.get('title')}">Title</td>
+                        <td class="Hits" th:text="${news.get('url')}">Url</td>
+                        <td class="Misses" th:text="${news.get('source')}">Source</td>
+                    </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      </script>
+  
+    </body>
+</html>

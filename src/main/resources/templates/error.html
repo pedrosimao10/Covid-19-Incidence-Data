@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+  <body>
+    <div class="topnav">
+      <a class="active" th:href="@{/}">Search Again</a>
+      <a th:href="@{/cache}">Cache Stats</a>
+      <a th:href="@{/news}">Latest News</a>
+    </div>
+    <div class="divresults">
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+              <h2 class="heading-section" style="color: white;" >Oops, something went wrong</h2>
+              <h2 class="heading-section" style="color: white;" >Please check if the credentials inserted are correct or the ISO code matches the country</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      </script>
+  
+    </body>
+</html>

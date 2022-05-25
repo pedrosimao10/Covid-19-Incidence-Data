@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+<body>
+  <div class="s01">
+    <form id="form" action="#" th:action="@{/stats}" th:object="${countryISO}" method="POST">
+      <fieldset>
+        <legend>Covid-19 Stats From A Country</legend>
+      </fieldset>
+      <div class="inner-form">
+        <div class="input-field first-wrap">
+          <input style="width: fit-content;" id= "search" name="Country" type="text" field="*{Country}" placeholder="Country Name"></p>
+        </div>
+        <div class="input-field second-wrap">
+          <input id="location" type="text" name="ThreeLetterSymbol" field="*{ThreeLetterSymbol}" placeholder="ISO Code" />
+        </div>
+        <div class="input-field third-wrap">
+          <button style="background-color: #bd2130;" class="btn-search" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <form style="margin-top:-70px;" id="form" action="#" th:action="@{/stats/world}" th:object="${countryISO}" method="POST">
+      <fieldset>
+        <legend>Covid-19 Stats From The World</legend>
+      </fieldset>
+      <div class="inner-form">
+        <div class="input-field third-wrap world">
+          <button style="margin-left: 110px; background-color: #bd2130;" class="btn-search" type="submit">World Stats</button>
+        </div>
+      </div>
+    </form>
+    <form style="margin-top:70px;" id="form" action="#" th:action="@{/news}" th:object="${countryISO}" method="POST">
+      <fieldset>
+        <legend>News</legend>
+      </fieldset>
+      <div class="inner-form">
+        <div class="input-field third-wrap news">
+          <button style="margin-left: 110px; background-color: #bd2130;" class="btn-search" type="submit">News</button>
+        </div>
+      </div>
+    </form>
+    </div>
+</body>
+</html> 
